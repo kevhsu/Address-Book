@@ -12,7 +12,7 @@
 
 <p>
     <b>People:</b>
-    <%= @group.contacts.map{ |t| t.name }.join(", ") %>
+    <%= @group.contacts.map{ |t| t.firstname }.join(", ") %>
 </p>
 
 <%= link_to 'Edit', edit_group_path(@group) %> |

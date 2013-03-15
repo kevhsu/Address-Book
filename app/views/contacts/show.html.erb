@@ -25,6 +25,11 @@
   <%= @contact.address %>
 </p>
 
+<p>
+    <b>Groups</b>
+    <%= @contact.groups.map{ |t| t.name }.join(", ") %>
+
+</p>
 
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>

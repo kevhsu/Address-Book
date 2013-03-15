@@ -25,7 +25,7 @@ class GroupsController < ApplicationController
   # GET /groups/new.json
   def new
     @group = Group.new
-
+    @contacts = Contact.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @group }
@@ -42,7 +42,8 @@ class GroupsController < ApplicationController
   # POST /groups.json
   def create
     @group = Group.new(params[:group])
-
+#    @contacts = Contact.find(params[:contact][:contact_ids])
+#    @group.contacts << @contacts
     respond_to do |format|
       if @group.save
         format.html { redirect_to @group, notice: 'Group was successfully created.' }
