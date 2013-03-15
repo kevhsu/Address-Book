@@ -1,6 +1,13 @@
 <h1>Editing group</h1>
 
 <%= render 'form' %>
+<ul class="users">
+    <% @contacts.each do |contact| %>
+        <li>
+            <%= link_to contact.firstname, contact %>
+        </li>
+    <% end %>
+</ul>
 
 <%= link_to 'Show', @group %> |
 <%= link_to 'Back', groups_path %>

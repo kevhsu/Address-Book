@@ -1,5 +1,7 @@
 class Group < ActiveRecord::Base
-  attr_accessible :description, :name, :contact_id
+  attr_accessible :description, :name
 
-  has_many :contact_ids
+  has_many :memberships, :dependent => :destroy 
+  has_many :contacts, :through => :memberships
+
 end
