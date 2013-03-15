@@ -31,5 +31,17 @@
 
 </p>
 
+<p>
+    <b>Groups</b>
+    <% @contact.groups.each do |group| %>
+        <li>
+            <%= link_to group.name, group %>
+        </li>
+
+    <% end %>
+
+</p>
+
+
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>

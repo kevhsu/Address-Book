@@ -2,11 +2,6 @@
 
 <%= render 'form' %>
 
-<% @contacts.each do |contact| %> 
-    <li>
-            <%= link_to "#{contact.firstname} #{contact.lastname}", contact %>
-    </li>
-<% end %>
 <%= link_to 'Show', @group %> | 
 <%= link_to 'Back', groups_path %>
 

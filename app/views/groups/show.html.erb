@@ -11,9 +11,13 @@
 </p>
 
 <p>
-    <b>People:</b>
-    <%= @group.contacts.map{ |t| t.firstname }.join(", ") %>
-</p>
+    <b>Contacts:</b>
+    <% @group.contacts.each do |contact| %>
+        <li>
+            <%= link_to "#{contact.firstname} #{contact.lastname}", contact %>
+        </li>
 
+    <% end %>
+</p>
 <%= link_to 'Edit', edit_group_path(@group) %> |
 <%= link_to 'Back', groups_path %>

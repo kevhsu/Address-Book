@@ -21,7 +21,7 @@
   </div>
   <p>
     <%= f.label "Contacts" %><br />
-      <%=select_tag 'group[contact_ids][]', options_for_select(@contacts.map {|s| [s.firstname, s.id]}), :multiple => true, :size =>8%>
+      <%=select_tag 'group[contact_ids][]', options_for_select(@contacts.map {|s| ["#{s.firstname} #{s.lastname}", s.id]}), :multiple => true, :size =>8%>
       </p>
   <div class="actions">
     <%= f.submit %>
