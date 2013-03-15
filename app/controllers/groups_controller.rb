@@ -35,6 +35,7 @@ class GroupsController < ApplicationController
   # GET /groups/1/edit
   def edit
     @group = Group.find(params[:id])
+    @contacts = Contact.all
   end
 
   # POST /groups
